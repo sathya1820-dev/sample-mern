@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom"
 import './Header_com.css'
-function Header_components(){
-
+import { Link } from 'react-router-dom';
+function Header_component(){
     return(
-        <div className="header">
+        <div>
+        <div className='header'>
             <Link to="/">Home</Link>
-            <Link to="/about">About us</Link>
-            <Link to="/contact">Contact us</Link>
+             <Link to="/about">About us</Link>
+             <Link to="/contact">Contact us</Link>
+             <Link to ="/login">login</Link>
+             <Link to ="/register">Register</Link>
+            </div>
         </div>
-    )
+    )   
 }
-export default Header_components
+export default Header_component
