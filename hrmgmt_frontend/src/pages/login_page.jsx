@@ -21,6 +21,22 @@ function Login_page(){
                 });
                 let data=await req.json()
                 console.log(data);
+                if(data.user){
+                    localStorage.setItem("currentuser",JSON.stringify(data.user))
+
+
+                    if(data.user.role=="HR"){
+                        navigate("/hrHome");
+                    }else{
+                        navigate("/emphome")
+                    }
+                }else{
+                    setError(data.message);
+                }
+
+
+
+
             
         }
     }
